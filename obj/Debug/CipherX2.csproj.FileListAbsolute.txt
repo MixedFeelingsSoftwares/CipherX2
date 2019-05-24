@@ -29,3 +29,5 @@ C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\CipherX2.csproj.CoreCompi
 C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\CipherX2.csproj.CopyComplete
 C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\CipherX2.exe
 C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\CipherX2.pdb
+C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\ThemeChanger.g.cs
+C:\Users\Elev\source\repos\CipherX2\CipherX2\obj\Debug\ThemeChanger.baml

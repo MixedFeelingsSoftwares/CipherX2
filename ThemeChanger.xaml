@@ -1,0 +1,14 @@
+﻿<Controls:MetroWindow x:Name="frmThemeChanger" x:Class="CipherX2.ThemeChanger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:CipherX2"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Title="CipherX2 - Metro Installer" Height="216" Width="368" NonActiveGlowBrush="{DynamicResource AccentColorBrush}" NonActiveWindowTitleBrush="{DynamicResource AccentColorBrush}" NonActiveBorderBrush="{DynamicResource AccentColorBrush}" GlowBrush="{DynamicResource AccentColorBrush}" ResizeMode="CanMinimize" IsMaxRestoreButtonEnabled="False" ShowMaxRestoreButton="False" TitleAlignment="Left" TitleCaps="False" TitleCharacterCasing="Normal" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Initialized="FrmThemeChanger_Initialized" Closed="FrmThemeChanger_Closed" IsMinButtonEnabled="False" ShowMinButton="False">
+    <Grid>
+        <Button x:Name="btn_applyTheme" Content="Apply Theme" HorizontalAlignment="Left" Margin="222,145,0,0" VerticalAlignment="Top" Width="130" Background="{DynamicResource AccentColorBrush}" BorderBrush="{DynamicResource AccentColorBrush}" Click="Btn_applyTheme_Click"/>
+        <ComboBox x:Name="CB_Themes" Background="{DynamicResource AccentColorBrush}" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Width="207" Foreground="White" SelectionChanged="CB_Themes_SelectionChanged"/>
+    </Grid>
+</Controls:MetroWindow>

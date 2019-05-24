@@ -1,8 +1,11 @@
-﻿using MahApps.Metro.Controls;
+﻿using CipherX2.Properties;
+using MahApps.Metro;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +28,31 @@ namespace CipherX2
         public MainWindow()
         {
             InitializeComponent();
+            if (Settings.Default.Accent != -1)
+            {
+                ThemeManager.ChangeAppStyle(
+                    System.Windows.Application.Current, 
+                    ThemeManager.Accents.ElementAt(Settings.Default.Accent),
+                    ThemeManager.DetectAppStyle(System.Windows.Application.Current).Item1
+                    );
+            }
+
+            ThemeManager.IsThemeChanged += (s, g) =>
+            {
+                IncrementPBar(PB_Main);
+            };
+        }
+
+        public void IncrementPBar(System.Windows.Controls.ProgressBar bar)
+        {
+            Thread t = new Thread(() =>
+            {
+                while (bar.Value < 100)
+                {
+                    bar.BeginInvoke(new Action(() => bar.Value++));
+                }
+            });
+            t.Start();
         }
 
         private void Btn_OpnSolution_Click(object sender, RoutedEventArgs e)
@@ -36,6 +64,17 @@ namespace CipherX2
 
                }
             }
+        }
+
+        private void Btn_ChangeTheme_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeChanger changer = new ThemeChanger(this);
+            changer.ShowDialog();
+        }
+
+        private void FrmMain_Initialized(object sender, EventArgs e)
+        {
+
         }
     }
 }
