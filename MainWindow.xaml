@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:CipherX2"
-                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                       Title="CipherX2 - Metro Installer" Height="292" Width="542" NonActiveGlowBrush="{DynamicResource AccentColorBrush}" NonActiveWindowTitleBrush="{DynamicResource AccentColorBrush}" NonActiveBorderBrush="{DynamicResource AccentColorBrush}" GlowBrush="{DynamicResource AccentColorBrush}" ResizeMode="CanMinimize" IsMaxRestoreButtonEnabled="False" ShowMaxRestoreButton="False" TitleAlignment="Left" TitleCaps="False" TitleCharacterCasing="Normal" WindowStartupLocation="CenterScreen" Initialized="FrmMain_Initialized">
     <!-- Buttons - Window -->
     <Controls:MetroWindow.RightWindowCommands>
@@ -19,9 +19,8 @@
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
-    
+
     <Grid>
-        <ProgressBar x:Name="PB_Main" Value="50" Background="{DynamicResource AccentColorBrush}" Foreground="{DynamicResource AccentColorBrush}" BorderBrush="{DynamicResource AccentColorBrush}" VerticalAlignment="Top"/>
         <Button x:Name="btn_OpnSolution" Content="Open Solution" HorizontalAlignment="Left" Margin="396,221,0,0" VerticalAlignment="Top" Width="130" Click="Btn_OpnSolution_Click" Background="{DynamicResource AccentColorBrush}" BorderBrush="{DynamicResource AccentColorBrush}"/>
     </Grid>
 </Controls:MetroWindow>

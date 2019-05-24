@@ -36,23 +36,6 @@ namespace CipherX2
                     ThemeManager.DetectAppStyle(System.Windows.Application.Current).Item1
                     );
             }
-
-            ThemeManager.IsThemeChanged += (s, g) =>
-            {
-                IncrementPBar(PB_Main);
-            };
-        }
-
-        public void IncrementPBar(System.Windows.Controls.ProgressBar bar)
-        {
-            Thread t = new Thread(() =>
-            {
-                while (bar.Value < 100)
-                {
-                    bar.BeginInvoke(new Action(() => bar.Value++));
-                }
-            });
-            t.Start();
         }
 
         private void Btn_OpnSolution_Click(object sender, RoutedEventArgs e)
